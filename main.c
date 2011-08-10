@@ -357,8 +357,14 @@ int main(int argc, char **argv) {
 	int fd, res;
 
 	ref_tree = load_fidlist("gsm_fids.txt");
-	
-	assert(argc > 1);
+
+	if(argc<2) {
+		printf("usage: %s phoenix:<serial_device> (pin)\n",argv[0]);
+		printf("examples: \n");
+		printf("  %s phoenix:/dev/ttyUSB0\n",argv[0]);
+		printf("  %s phoenix:/dev/ttyUSB0 1234\n",argv[0]);
+		return 0;
+	}
 
 	sprintf(txt,"%u-log.txt",now);
 	term_log = fopen(txt,"w");
@@ -369,7 +375,10 @@ int main(int argc, char **argv) {
 	assert(fs_log);
 	
 	fd = term_init(argv[1], term_log ? 255 : 0, term_log);
-	assert(fd);
+	if(!fd) {
+		fprintf(stderr,"cannot initialize terminal\n");
+		return -5;
+	}
 
 	res = term_reset(buf, 256);
 	if(res < 1) {
@@ -410,6 +419,7 @@ int main(int argc, char **argv) {
 	
 	scan_tree(fs_log, SIM_MF, ref_tree);
 
+//out:	
 	if(term_log)
 		fclose(term_log);
 

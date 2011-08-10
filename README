@@ -1,0 +1,11 @@
+SIM card filesystem dumper
+
+usage: ./dump phoenix:<serial_device> (pin)
+examples: 
+  ./dump phoenix:/dev/ttyUSB0
+  ./dump phoenix:/dev/ttyUSB0 1234
+
+creates two files:
+	- $unixtime-fs.txt 	contains the dumped filesystem
+	- $unixtime-log.txt	contains a full dump of all APDUs
+
