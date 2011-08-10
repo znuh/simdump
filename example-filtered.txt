@@ -1,0 +1,930 @@
+ATR: 3b 9f 96 80 1f c3 80 31 e0 73 fe 21 1b b3 e2 02 7e 83 0f 90 00 82
+3f00 MF           (MF) 4 DFs 20 EFs
+ 2f00 ???          (EF) linear status 01 size    33 rec_len  33
+    1: XXX
+ 2f05 EF_ELP       (EF) transp status 01 size     8 rec_len   0
+  0000: XXX
+ 2f06 ???          (EF) linear status 01 size   962 rec_len  37
+ 2f72 ???          (EF) transp status 01 size     2 rec_len   0
+ 2fe2 EF_ICCID     (EF) transp status 01 size    10 rec_len   0
+  0000: XXX
+ 2fe5 ???          (EF) transp status 01 size     3 rec_len   0
+ 5f09 ???          (EF) linear status 01 size    42 rec_len  21
+ 5f11 ???          (EF) transp status 01 size    41 rec_len   0
+ 6f1f ???          (EF) transp status 01 size     3 rec_len   0
+ 6fa1 ???          (EF) transp status 01 size    30 rec_len   0
+  0000: XXX
+  0010: XXX
+ 7f10 DF_TELECOM   (DF) 2 DFs 15 EFs
+  6f06 ???          (EF) linear status 01 size   240 rec_len  24
+  6f3a EF_ADN       (EF) linear status 01 size  7500 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+    22: XXX
+    23: XXX
+    24: XXX
+    25: XXX
+    26: XXX
+    27: XXX
+    28: XXX
+    29: XXX
+    30: XXX
+    31: XXX
+    32: XXX
+    33: XXX
+    34: XXX
+    35: XXX
+    36: XXX
+    37: XXX
+    38: XXX
+    39: XXX
+    40: XXX
+    41: XXX
+    42: XXX
+    43: XXX
+    44: XXX
+    45: XXX
+    46: XXX
+    47: XXX
+    48: XXX
+    49: XXX
+    50: XXX
+    51: XXX
+    52: XXX
+    53: XXX
+    54: XXX
+    55: XXX
+    56: XXX
+    57: XXX
+    58: XXX
+    59: XXX
+    60: XXX
+    61: XXX
+    62: XXX
+    63: XXX
+    64: XXX
+    65: XXX
+    66: XXX
+    67: XXX
+    68: XXX
+    69: XXX
+    70: XXX
+    71: XXX
+    72: XXX
+    73: XXX
+    74: XXX
+    75: XXX
+    76: XXX
+    77: XXX
+    78: XXX
+    79: XXX
+    80: XXX
+    81: XXX
+    82: XXX
+    83: XXX
+    84: XXX
+    85: XXX
+    86: XXX
+    87: XXX
+    88: XXX
+    89: XXX
+    90: XXX
+    91: XXX
+    92: XXX
+    93: XXX
+    94: XXX
+    95: XXX
+    96: XXX
+    97: XXX
+    98: XXX
+    99: XXX
+   100: XXX
+   101: XXX
+   102: XXX
+   103: XXX
+   104: XXX
+   105: XXX
+   106: XXX
+   107: XXX
+   108: XXX
+   109: XXX
+   110: XXX
+   111: XXX
+   112: XXX
+   113: XXX
+   114: XXX
+   115: XXX
+   116: XXX
+   117: XXX
+   118: XXX
+   119: XXX
+   120: XXX
+   121: XXX
+   122: XXX
+   123: XXX
+   124: XXX
+   125: XXX
+   126: XXX
+   127: XXX
+   128: XXX
+   129: XXX
+   130: XXX
+   131: XXX
+   132: XXX
+   133: XXX
+   134: XXX
+   135: XXX
+   136: XXX
+   137: XXX
+   138: XXX
+   139: XXX
+   140: XXX
+   141: XXX
+   142: XXX
+   143: XXX
+   144: XXX
+   145: XXX
+   146: XXX
+   147: XXX
+   148: XXX
+   149: XXX
+   150: XXX
+   151: XXX
+   152: XXX
+   153: XXX
+   154: XXX
+   155: XXX
+   156: XXX
+   157: XXX
+   158: XXX
+   159: XXX
+   160: XXX
+   161: XXX
+   162: XXX
+   163: XXX
+   164: XXX
+   165: XXX
+   166: XXX
+   167: XXX
+   168: XXX
+   169: XXX
+   170: XXX
+   171: XXX
+   172: XXX
+   173: XXX
+   174: XXX
+   175: XXX
+   176: XXX
+   177: XXX
+   178: XXX
+   179: XXX
+   180: XXX
+   181: XXX
+   182: XXX
+   183: XXX
+   184: XXX
+   185: XXX
+   186: XXX
+   187: XXX
+   188: XXX
+   189: XXX
+   190: XXX
+   191: XXX
+   192: XXX
+   193: XXX
+   194: XXX
+   195: XXX
+   196: XXX
+   197: XXX
+   198: XXX
+   199: XXX
+   200: XXX
+   201: XXX
+   202: XXX
+   203: XXX
+   204: XXX
+   205: XXX
+   206: XXX
+   207: XXX
+   208: XXX
+   209: XXX
+   210: XXX
+   211: XXX
+   212: XXX
+   213: XXX
+   214: XXX
+   215: XXX
+   216: XXX
+   217: XXX
+   218: XXX
+   219: XXX
+   220: XXX
+   221: XXX
+   222: XXX
+   223: XXX
+   224: XXX
+   225: XXX
+   226: XXX
+   227: XXX
+   228: XXX
+   229: XXX
+   230: XXX
+   231: XXX
+   232: XXX
+   233: XXX
+   234: XXX
+   235: XXX
+   236: XXX
+   237: XXX
+   238: XXX
+   239: XXX
+   240: XXX
+   241: XXX
+   242: XXX
+   243: XXX
+   244: XXX
+   245: XXX
+   246: XXX
+   247: XXX
+   248: XXX
+   249: XXX
+   250: XXX
+  6f3b EF_FDN       (EF) linear status 01 size   900 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+    22: XXX
+    23: XXX
+    24: XXX
+    25: XXX
+    26: XXX
+    27: XXX
+    28: XXX
+    29: XXX
+    30: XXX
+  6f3c EF_SMS       (EF) linear status 01 size  3520 rec_len 176
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+  6f40 EF_MSISDN    (EF) linear status 01 size    90 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+  6f42 EF_SMSP      (EF) linear status 01 size   132 rec_len  44
+     1: XXX
+     2: XXX
+     3: XXX
+  6f43 EF_SMSS      (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6f44 EF_LND       (EF) cyclic status 01 size   300 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f47 EF_SMSR      (EF) linear status 01 size   150 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+  6f49 EF_SDN       (EF) linear status 01 size   300 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f4a EF_EXT1      (EF) linear status 01 size   130 rec_len  13
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f4b EF_EXT2      (EF) linear status 01 size    39 rec_len  13
+     1: XXX
+     2: XXX
+     3: XXX
+  6f4c EF_EXT3      (EF) linear status 01 size    39 rec_len  13
+     1: XXX
+     2: XXX
+     3: XXX
+  6f4f EF_CPPE      (EF) linear status 01 size   150 rec_len  15
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f54 ???          (EF) transp status 01 size    14 rec_len   0
+  5f3a ???          (DF) 0 DFs 15 EFs
+   4f09 ???          (EF) linear status 01 size   500 rec_len   2
+   4f11 ???          (EF) linear status 01 size  3750 rec_len  15
+   4f12 ???          (EF) linear status 01 size   130 rec_len  13
+   4f13 ???          (EF) linear status 01 size  3750 rec_len  15
+   4f15 ???          (EF) linear status 01 size  1000 rec_len   4
+   4f16 ???          (EF) linear status 01 size   500 rec_len   2
+   4f19 ???          (EF) linear status 01 size   400 rec_len  16
+   4f22 ???          (EF) transp status 01 size     4 rec_len   0
+   4f23 ???          (EF) transp status 01 size     2 rec_len   0
+   4f24 ???          (EF) transp status 01 size     2 rec_len   0
+   4f30 ???          (EF) linear status 01 size   100 rec_len 100
+   4f3a ???          (EF) linear status 01 size  7500 rec_len  30
+   4f3d ???          (EF) linear status 01 size   150 rec_len  15
+   4f4b ???          (EF) linear status 01 size   100 rec_len  10
+   4f51 ???          (EF) linear status 01 size  5880 rec_len  42
+  5f50 ???          (DF) 0 DFs 3 EFs
+   4f01 ???          (EF) transp status 01 size    22 rec_len   0
+    0000: XXX
+    0010: XXX
+   4f02 ???          (EF) transp status 01 size    22 rec_len   0
+    0000: XXX
+    0010: XXX
+   4f20 ???          (EF) linear status 01 size    55 rec_len  11
+      1: XXX
+      2: XXX
+      3: XXX
+      4: XXX
+      5: XXX
+ 7f20 DF_GSM       (DF) 0 DFs 45 EFs
+  4fe0 ???          (EF) linear status 01 size     3 rec_len   3
+  6f05 EF_LP        (EF) transp status 01 size     4 rec_len   0
+   0000: XXX
+  6f07 EF_IMSI      (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f11 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f12 ???          (EF) linear status 01 size    93 rec_len  31
+     1: XXX
+     2: XXX
+     3: XXX
+  6f13 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f14 ???          (EF) transp status 01 size    14 rec_len   0
+   0000: XXX
+  6f15 ???          (EF) transp status 01 size    18 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f16 ???          (EF) transp status 01 size     3 rec_len   0
+   0000: XXX
+  6f17 ???          (EF) linear status 01 size   120 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+  6f18 ???          (EF) transp status 01 size    10 rec_len   0
+   0000: XXX
+  6f20 EF_KC        (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f30 EF_PLMNSEL   (EF) transp status 01 size    96 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+  6f31 EF_HPPLMN    (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f37 EF_ACMMAX    (EF) transp status 01 size     3 rec_len   0
+   0000: XXX
+  6f38 EF_SST       (EF) transp status 01 size    15 rec_len   0
+   0000: XXX
+  6f39 EF_ACM       (EF) cyclic status 01 size    30 rec_len   3
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f3e EF_GID1      (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f3f EF_GID2      (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f41 EF_PUCT      (EF) transp status 01 size     5 rec_len   0
+   0000: XXX
+  6f45 EF_CBMI      (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f46 EF_SPN       (EF) transp status 01 size    17 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f48 EF_CBMID     (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f50 EF_CBMIR     (EF) transp status 01 size    40 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+  6f52 EF_KCGPRS    (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f53 EF_LOCIGPRS  (EF) transp status 01 size    14 rec_len   0
+   0000: XXX
+  6f54 EF_SUME      (EF) transp status 01 size    14 rec_len   0
+  6f63 EF_CPBCCH    (EF) transp status 01 size    16 rec_len   0
+   0000: XXX
+  6f64 EF_INVSCAN   (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f74 EF_BCCH      (EF) transp status 01 size    16 rec_len   0
+   0000: XXX
+  6f78 EF_ACC       (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6f7b EF_FPLMN     (EF) transp status 01 size    12 rec_len   0
+   0000: XXX
+  6f7e EF_LOCI      (EF) transp status 01 size    11 rec_len   0
+   0000: XXX
+  6fad EF_AD        (EF) transp status 01 size     4 rec_len   0
+   0000: XXX
+  6fae EF_PHASE     (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6fb5 EF_EMLPP     (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6fb6 EF_AAEM      (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6fb7 EF_ECC       (EF) transp status 01 size    15 rec_len   0
+   0000: XXX
+  6fc5 EF_PNN       (EF) linear status 01 size    28 rec_len  14
+     1: XXX
+     2: XXX
+  6fc6 EF_OPL       (EF) linear status 01 size     8 rec_len   8
+     1: XXX
+  6fc7 EF_MBDN      (EF) linear status 01 size   120 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+  6fc9 EF_MBI       (EF) linear status 01 size     4 rec_len   4
+     1: XXX
+  6fca EF_MWIS      (EF) linear status 01 size     5 rec_len   5
+     1: XXX
+  6fcb EF_CFIS      (EF) linear status 01 size    16 rec_len  16
+     1: XXX
+  6fcd EF_SPDI      (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+ 7f21 ???          (DF) 0 DFs 45 EFs
+  4fe0 ???          (EF) linear status 01 size     3 rec_len   3
+  6f05 ???          (EF) transp status 01 size     4 rec_len   0
+   0000: XXX
+  6f07 ???          (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f11 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f12 ???          (EF) linear status 01 size    93 rec_len  31
+     1: XXX
+     2: XXX
+     3: XXX
+  6f13 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f14 ???          (EF) transp status 01 size    14 rec_len   0
+   0000: XXX
+  6f15 ???          (EF) transp status 01 size    18 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f16 ???          (EF) transp status 01 size     3 rec_len   0
+   0000: XXX
+  6f17 ???          (EF) linear status 01 size   120 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+  6f18 ???          (EF) transp status 01 size    10 rec_len   0
+   0000: XXX
+  6f20 ???          (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f30 ???          (EF) transp status 01 size    96 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+  6f31 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f37 ???          (EF) transp status 01 size     3 rec_len   0
+   0000: XXX
+  6f38 ???          (EF) transp status 01 size    15 rec_len   0
+   0000: XXX
+  6f39 ???          (EF) cyclic status 01 size    30 rec_len   3
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+  6f3e ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f3f ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f41 ???          (EF) transp status 01 size     5 rec_len   0
+   0000: XXX
+  6f45 ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f46 ???          (EF) transp status 01 size    17 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f48 ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f50 ???          (EF) transp status 01 size    40 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+  6f52 ???          (EF) transp status 01 size     9 rec_len   0
+   0000: XXX
+  6f53 ???          (EF) transp status 01 size    14 rec_len   0
+   0000: XXX
+  6f54 ???          (EF) transp status 01 size    14 rec_len   0
+  6f63 ???          (EF) transp status 01 size    16 rec_len   0
+   0000: XXX
+  6f64 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6f74 ???          (EF) transp status 01 size    16 rec_len   0
+   0000: XXX
+  6f78 ???          (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6f7b ???          (EF) transp status 01 size    12 rec_len   0
+   0000: XXX
+  6f7e ???          (EF) transp status 01 size    11 rec_len   0
+   0000: XXX
+  6fad ???          (EF) transp status 01 size     4 rec_len   0
+   0000: XXX
+  6fae ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6fb5 ???          (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6fb6 ???          (EF) transp status 01 size     1 rec_len   0
+   0000: XXX
+  6fb7 ???          (EF) transp status 01 size    15 rec_len   0
+   0000: XXX
+  6fc5 ???          (EF) linear status 01 size    28 rec_len  14
+     1: XXX
+     2: XXX
+  6fc6 ???          (EF) linear status 01 size     8 rec_len   8
+     1: XXX
+  6fc7 ???          (EF) linear status 01 size   120 rec_len  30
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+  6fc9 ???          (EF) linear status 01 size     4 rec_len   4
+     1: XXX
+  6fca ???          (EF) linear status 01 size     5 rec_len   5
+     1: XXX
+  6fcb ???          (EF) linear status 01 size    16 rec_len  16
+     1: XXX
+  6fcd ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+ 7f43 ???          (DF) 0 DFs 27 EFs
+  4fe0 ???          (EF) linear status 01 size    33 rec_len   3
+  6f60 ???          (EF) transp status 01 size   123 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+   0060: XXX
+   0070: XXX
+  6f61 ???          (EF) linear status 01 size    84 rec_len   4
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+  6f62 ???          (EF) linear status 01 size    84 rec_len   4
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+  6f63 ???          (EF) linear status 01 size    84 rec_len   4
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+  6f64 ???          (EF) linear status 01 size    84 rec_len   4
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+     9: XXX
+    10: XXX
+    11: XXX
+    12: XXX
+    13: XXX
+    14: XXX
+    15: XXX
+    16: XXX
+    17: XXX
+    18: XXX
+    19: XXX
+    20: XXX
+    21: XXX
+  6f65 ???          (EF) transp status 01 size    20 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f80 ???          (EF) transp status 01 size    96 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+  6f81 ???          (EF) transp status 01 size   700 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+   0060: XXX
+   0070: XXX
+   0080: XXX
+   0090: XXX
+   00a0: XXX
+   00b0: XXX
+   00c0: XXX
+   00d0: XXX
+   00e0: XXX
+   00f0: XXX
+   0100: XXX
+   0110: XXX
+   0120: XXX
+   0130: XXX
+   0140: XXX
+   0150: XXX
+   0160: XXX
+   0170: XXX
+   0180: XXX
+   0190: XXX
+   01a0: XXX
+   01b0: XXX
+   01c0: XXX
+   01d0: XXX
+   01e0: XXX
+   01f0: XXX
+   0200: XXX
+   0210: XXX
+   0220: XXX
+   0230: XXX
+   0240: XXX
+   0250: XXX
+   0260: XXX
+   0270: XXX
+   0280: XXX
+   0290: XXX
+   02a0: XXX
+   02b0: XXX
+  6f82 ???          (EF) transp status 01 size   700 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+   0060: XXX
+   0070: XXX
+   0080: XXX
+   0090: XXX
+   00a0: XXX
+   00b0: XXX
+   00c0: XXX
+   00d0: XXX
+   00e0: XXX
+   00f0: XXX
+   0100: XXX
+   0110: XXX
+   0120: XXX
+   0130: XXX
+   0140: XXX
+   0150: XXX
+   0160: XXX
+   0170: XXX
+   0180: XXX
+   0190: XXX
+   01a0: XXX
+   01b0: XXX
+   01c0: XXX
+   01d0: XXX
+   01e0: XXX
+   01f0: XXX
+   0200: XXX
+   0210: XXX
+   0220: XXX
+   0230: XXX
+   0240: XXX
+   0250: XXX
+   0260: XXX
+   0270: XXX
+   0280: XXX
+   0290: XXX
+   02a0: XXX
+   02b0: XXX
+  6f83 ???          (EF) transp status 01 size   150 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+   0060: XXX
+   0070: XXX
+   0080: XXX
+   0090: XXX
+  6f84 ???          (EF) transp status 01 size   150 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+   0060: XXX
+   0070: XXX
+   0080: XXX
+   0090: XXX
+  6f85 ???          (EF) cyclic status 01 size     9 rec_len   9
+     1: XXX
+  6f86 ???          (EF) cyclic status 01 size    32 rec_len   4
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+     6: XXX
+     7: XXX
+     8: XXX
+  6f87 ???          (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6f88 ???          (EF) transp status 01 size    32 rec_len   0
+   0000: XXX
+   0010: XXX
+  6f89 ???          (EF) transp status 01 size    32 rec_len   0
+   0000: XXX
+   0010: XXX
+  6fa0 ???          (EF) linear status 01 size    64 rec_len  16
+  6fd2 ???          (EF) transp status 01 size    10 rec_len   0
+   0000: XXX
+  6fd3 ???          (EF) transp status 01 size    96 rec_len   0
+   0000: XXX
+   0010: XXX
+   0020: XXX
+   0030: XXX
+   0040: XXX
+   0050: XXX
+  6fe0 ???          (EF) transp status 01 size    29 rec_len   0
+  6fe1 ???          (EF) transp status 01 size     4 rec_len   0
+  6fe2 ???          (EF) cyclic status 01 size    40 rec_len   8
+     1: XXX
+     2: XXX
+     3: XXX
+     4: XXX
+     5: XXX
+  6ff0 ???          (EF) transp status 01 size     3 rec_len   0
+   0000: XXX
+  6ff1 ???          (EF) transp status 01 size     2 rec_len   0
+   0000: XXX
+  6ff2 ???          (EF) transp status 01 size    10 rec_len   0
+   0000: XXX
+  6ff3 ???          (EF) transp status 01 size    10 rec_len   0
+   0000: XXX
+ 7f4a ???          (DF) 0 DFs 3 EFs
+  4fe0 ???          (EF) linear status 01 size     3 rec_len   3
