@@ -1,0 +1,3 @@
+- compare ef/df_cnt with info from select
+- GSM/3G FID trees
+- proper get response handling in terminal
