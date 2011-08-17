@@ -1,6 +1,10 @@
+CC = gcc
+LDFLAGS := $(shell pkg-config --libs libpcsclite)
+CFLAGS := $(shell pkg-config --cflags libpcsclite)
+
 
 all:
-	gcc -Wall -g -o dump main.c rs232_if.c terminal.c terminal_phoenix.c utils.c card.c
+	$(CC) -Wall -g $(CFLAGS) -o dump main.c rs232_if.c terminal.c terminal_phoenix.c terminal_pcsc.c utils.c card.c $(LDFLAGS)
 
 clean:
 	rm -f dump *~
