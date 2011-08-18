@@ -113,19 +113,33 @@ int term_pcsc_reset(uint8_t * atr, int maxlen)
 
 int term_pcsc_apdu(apdu_t * apdu)
 {
-	//TODO: execute APDU from parameter
+	BYTE data[256];
 	int i;
-	 BYTE cmd1[] = { 0x00, 0xA4, 0x04, 0x00, 0x0A, 0xA0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0x0C, 0x06, 0x01 };
+	int sendLength = 4+apdu->p3;
 
+	//build data to send from apdu
+	data[0] = apdu->cla;
+	data[1] = apdu->ins;
+	data[2] = apdu->p1;
+	data[3] = apdu->p2;
+	data[4] = apdu->p3;
+	if(apdu->p3) {
+		memcpy(&data[5],apdu->dout,apdu->p3);
+	}
+	//send data
 	dwRecvLength = sizeof(pbRecvBuffer);
-	rv = SCardTransmit(hCard, &pioSendPci, cmd1, sizeof(cmd1), NULL, pbRecvBuffer, &dwRecvLength);
+	rv = SCardTransmit(hCard, &pioSendPci, data, sendLength, NULL, pbRecvBuffer, &dwRecvLength);
 	CHECK("SCardTransmit", rv)
-
+	printf("Receive Length: %d\n",(int) dwRecvLength);
+	// ugly hack
+	apdu->sw[0] = pbRecvBuffer[0];
+	apdu->sw[1] = pbRecvBuffer[1];
+	//check response
 	printf("response: ");
 	for(i=0; i<dwRecvLength; i++)
 		printf("%02X ", pbRecvBuffer[i]);
 	printf("\n");
-	return 0;
+	return 1;
 }
 
 int term_pcsc_pps(uint8_t *obuf, uint8_t *ibuf) {
