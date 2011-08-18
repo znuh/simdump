@@ -105,8 +105,11 @@ int term_pcsc_reset(uint8_t * atr, int maxlen)
 	// TODO: return full ATR?
     	rv = SCardReconnect(hCard, SCARD_SHARE_EXCLUSIVE, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1,  SCARD_RESET_CARD, &dwActiveProtocol);
     	rv = SCardStatus(hCard,NULL, &dwReaderLen, &dwState, &dwActiveProtocol, pbAtr, &dwAtrLen);
+
     	if ( rv == SCARD_S_SUCCESS ) {
         	memcpy(atr, pbAtr, maxlen);
+		printf("ATR: ");
+		dump_hex(atr,dwAtrLen);
         	return 1;
     	}
 	return 0;
@@ -115,7 +118,6 @@ int term_pcsc_reset(uint8_t * atr, int maxlen)
 int term_pcsc_apdu(apdu_t * apdu)
 {
 	BYTE data[256];
-	int i;
 	int sendLength = 5+apdu->p3;
 
 	//build data to send from apdu
