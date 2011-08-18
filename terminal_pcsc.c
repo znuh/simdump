@@ -99,11 +99,14 @@ void term_pcsc_close()
 
 int term_pcsc_reset(uint8_t * atr, int maxlen)
 {
-	// TODO: return ATR
+	DWORD dwState, dwAtrLen, dwReaderLen;
+    	BYTE pbAtr[64];
+	// TODO: return full ATR?
     	rv = SCardReconnect(hCard, SCARD_SHARE_EXCLUSIVE, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1,  SCARD_RESET_CARD, &dwActiveProtocol);
-
-    	if ( rv == SCARD_S_SUCCESS )  {
-		return 1;
+    	rv = SCardStatus(hCard,NULL, &dwReaderLen, &dwState, &dwActiveProtocol, pbAtr, &dwAtrLen);
+    	if ( rv == SCARD_S_SUCCESS ) {
+        	memcpy(atr, pbAtr, maxlen);
+        	return 1;
     	}
 	return 0;
 }
