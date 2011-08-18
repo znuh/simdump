@@ -99,6 +99,7 @@ void term_pcsc_close()
 
 int term_pcsc_reset(uint8_t * atr, int maxlen)
 {
+	// TODO: return ATR
     	rv = SCardReconnect(hCard, SCARD_SHARE_EXCLUSIVE, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1,  SCARD_RESET_CARD, &dwActiveProtocol);
 
     	if ( rv == SCARD_S_SUCCESS )  {
@@ -109,6 +110,7 @@ int term_pcsc_reset(uint8_t * atr, int maxlen)
 
 int term_pcsc_apdu(apdu_t * apdu)
 {
+	//TODO: execute APDU from parameter
 	int i;
 	 BYTE cmd1[] = { 0x00, 0xA4, 0x04, 0x00, 0x0A, 0xA0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0x0C, 0x06, 0x01 };
 
