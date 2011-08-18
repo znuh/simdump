@@ -22,6 +22,7 @@
 #include <assert.h>
 #include <winscard.h>
 #include "terminal.h"
+#include "utils.h"
 
 #define CHECK(f, rv) \
  if (SCARD_S_SUCCESS != rv) \
@@ -115,7 +116,7 @@ int term_pcsc_apdu(apdu_t * apdu)
 {
 	BYTE data[256];
 	int i;
-	int sendLength = 4+apdu->p3;
+	int sendLength = 5+apdu->p3;
 
 	//build data to send from apdu
 	data[0] = apdu->cla;
@@ -128,17 +129,13 @@ int term_pcsc_apdu(apdu_t * apdu)
 	}
 	//send data
 	dwRecvLength = sizeof(pbRecvBuffer);
+	dump_hex(data,sendLength);
 	rv = SCardTransmit(hCard, &pioSendPci, data, sendLength, NULL, pbRecvBuffer, &dwRecvLength);
 	CHECK("SCardTransmit", rv)
 	printf("Receive Length: %d\n",(int) dwRecvLength);
 	// ugly hack
 	apdu->sw[0] = pbRecvBuffer[0];
 	apdu->sw[1] = pbRecvBuffer[1];
-	//check response
-	printf("response: ");
-	for(i=0; i<dwRecvLength; i++)
-		printf("%02X ", pbRecvBuffer[i]);
-	printf("\n");
 	return 1;
 }
 
