@@ -27,7 +27,6 @@
  if (SCARD_S_SUCCESS != rv) \
  { \
   printf(f ": %s\n", pcsc_stringify_error(rv)); \
-  return -1; \
  }
 
 LONG rv; 
@@ -41,7 +40,6 @@ SCARD_IO_REQUEST pioSendPci;
 BYTE pbRecvBuffer[256];
 
 
-static int pcsc_debug = 0;
 
 int term_pcsc_init(char *dev, int debug)
 {
@@ -62,9 +60,8 @@ int term_pcsc_init(char *dev, int debug)
 
 	printf("reader name: %s\n", mszReaders);
 
-	rv = SCardConnect(hContext, mszReaders, SCARD_SHARE_SHARED,
-	SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1, &hCard, &dwActiveProtocol);
-	CHECK("SCardConnect", rv) 
+	rv = SCardConnect(hContext, mszReaders, SCARD_SHARE_SHARED, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1, &hCard, &dwActiveProtocol);
+	CHECK("SCardConnect", rv)
 
 	switch(dwActiveProtocol)
 	{
@@ -76,7 +73,10 @@ int term_pcsc_init(char *dev, int debug)
 			pioSendPci = *SCARD_PCI_T1;
 			break;
 	}
-
+	if(rv == SCARD_S_SUCCESS) {
+		return 1;
+	}
+	return 0;
 }
 
 void term_pcsc_close()
@@ -99,31 +99,28 @@ void term_pcsc_close()
 
 int term_pcsc_reset(uint8_t * atr, int maxlen)
 {
-	// SCARD RECONNECT
-	/*
-	cs_debug("PCSC resetting card in (%s)", pcsc_reader->pcsc_name);
-    	rv = SCardReconnect(pcsc_reader->hCard, SCARD_SHARE_EXCLUSIVE, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1,  SCARD_RESET_CARD, &pcsc_reader->dwActiveProtocol);
-    	cs_debug("PCSC resetting done on card in (%s)", pcsc_reader->pcsc_name);
-    	cs_debug("PCSC Protocol (T=%d)",( pcsc_reader->dwActiveProtocol == SCARD_PROTOCOL_T0 ? 0 :  1));
+    	rv = SCardReconnect(hCard, SCARD_SHARE_EXCLUSIVE, SCARD_PROTOCOL_T0 | SCARD_PROTOCOL_T1,  SCARD_RESET_CARD, &dwActiveProtocol);
 
-    	if ( rv != SCARD_S_SUCCESS )  {
-       		cs_debug("Error PCSC failed to reset card (%lx)", rv);
-        	return(0);
+    	if ( rv == SCARD_S_SUCCESS )  {
+		return 1;
     	}
-	*/
+	return 0;
 }
 
 int term_pcsc_apdu(apdu_t * apdu)
 {
+	int i;
+	 BYTE cmd1[] = { 0x00, 0xA4, 0x04, 0x00, 0x0A, 0xA0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0x0C, 0x06, 0x01 };
+
 	dwRecvLength = sizeof(pbRecvBuffer);
-	rv = SCardTransmit(hCard, &pioSendPci, cmd1, sizeof(cmd1),
-	NULL, pbRecvBuffer, &dwRecvLength);
+	rv = SCardTransmit(hCard, &pioSendPci, cmd1, sizeof(cmd1), NULL, pbRecvBuffer, &dwRecvLength);
 	CHECK("SCardTransmit", rv)
 
 	printf("response: ");
 	for(i=0; i<dwRecvLength; i++)
 		printf("%02X ", pbRecvBuffer[i]);
 	printf("\n");
+	return 0;
 }
 
 int term_pcsc_pps(uint8_t *obuf, uint8_t *ibuf) {
