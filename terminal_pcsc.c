@@ -138,6 +138,9 @@ int term_pcsc_apdu(apdu_t * apdu)
 	// ugly hack
 	apdu->sw[0] = pbRecvBuffer[0];
 	apdu->sw[1] = pbRecvBuffer[1];
+	if(apdu->sw[0] == 0x90 && apdu->sw[1] == 0x00) {
+		return 0;
+	}
 	return 1;
 }
 
