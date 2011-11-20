@@ -21,11 +21,11 @@
 #include "utils.h"
 
 extern terminal_t phoenix_term;
-extern terminal_t fpga_term;
+extern terminal_t pcsc_term;
 
 static terminal_t *term_list[] = {
 	&phoenix_term,
-//	&fpga_term,
+	&pcsc_term,
 	NULL
 };
 
