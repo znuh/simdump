@@ -120,6 +120,8 @@ int term_pcsc_apdu(apdu_t * apdu)
 	BYTE data[256];
 	int sendLength = 5+apdu->p3;
 
+	memset(data, 0, sizeof(data));
+
 	//build data to send from apdu
 	data[0] = apdu->cla;
 	data[1] = apdu->ins;
@@ -127,7 +129,10 @@ int term_pcsc_apdu(apdu_t * apdu)
 	data[3] = apdu->p2;
 	data[4] = apdu->p3;
 	if(apdu->p3) {
-		memcpy(&data[5],apdu->dout,apdu->p3);
+		if (apdu->dout)
+			memcpy(&data[5],apdu->dout,apdu->p3);
+		else if (apdu->din)
+			sendLength = 5;
 	}
 	//send data
 	dwRecvLength = sizeof(pbRecvBuffer);
@@ -135,9 +140,14 @@ int term_pcsc_apdu(apdu_t * apdu)
 	rv = SCardTransmit(hCard, &pioSendPci, data, sendLength, NULL, pbRecvBuffer, &dwRecvLength);
 	CHECK("SCardTransmit", rv)
 	printf("Receive Length: %d\n",(int) dwRecvLength);
-	// ugly hack
-	apdu->sw[0] = pbRecvBuffer[0];
-	apdu->sw[1] = pbRecvBuffer[1];
+
+	if (dwRecvLength >= 2) {
+		if (apdu->din)
+			memcpy(apdu->din, pbRecvBuffer, dwRecvLength-2);
+		apdu->sw[0] = pbRecvBuffer[dwRecvLength-2];
+		apdu->sw[1] = pbRecvBuffer[dwRecvLength-1];
+	}
+
 	if(apdu->sw[0] == 0x90 && apdu->sw[1] == 0x00) {
 		return 0;
 	}
